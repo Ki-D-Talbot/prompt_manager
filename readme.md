@@ -97,6 +97,7 @@ All your prompts are stored locally in your browser using Chrome's Storage API. 
 
 ```
 prompt_manager/
+|_ screenshots 
 ├── icons/
 │   ├── icon16.png
 │   ├── icon48.png
@@ -139,10 +140,6 @@ To create a distributable version of the extension:
 - **Response Management**: Store AI responses alongside prompts
 - **Collaboration Features**: Share prompts with team members
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -152,12 +149,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## Contact
-
-- GitHub: [Your GitHub Profile](https://github.com/yourusername)
-- Twitter: [@YourTwitter](https://twitter.com/yourtwitter)
-- Email: your.email@example.com
 
 ## Acknowledgments
 
