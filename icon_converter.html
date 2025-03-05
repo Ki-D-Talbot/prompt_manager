@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Icon Converter</title>
+</head>
+<body>
+    <h1>Convert SVG to PNG for Chrome Extension</h1>
+    <p>This page will help you convert the SVG icon to PNG files in the required sizes.</p>
+    
+    <div id="svgContainer"></div>
+    
+    <canvas id="canvas16" width="16" height="16" style="border:1px solid black; margin-top: 20px;"></canvas>
+    <button onclick="downloadIcon(16)">Download 16px Icon</button>
+    
+    <canvas id="canvas48" width="48" height="48" style="border:1px solid black; margin-top: 20px;"></canvas>
+    <button onclick="downloadIcon(48)">Download 48px Icon</button>
+    
+    <canvas id="canvas128" width="128" height="128" style="border:1px solid black; margin-top: 20px;"></canvas>
+    <button onclick="downloadIcon(128)">Download 128px Icon</button>
+    
+    <script>
+        // SVG data directly embedded (from the SVG artifact)
+        const svgData = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+          <!-- Background circle -->
+          <circle cx="64" cy="64" r="60" fill="#2196F3"/>
+          
+          <!-- Speech bubble -->
+          <path d="M40 45 H88 Q98 45 98 55 V75 Q98 85 88 85 H70 L64 95 L58 85 H40 Q30 85 30 75 V55 Q30 45 40 45 Z" fill="white"/>
+          
+          <!-- Text lines -->
+          <rect x="40" y="55" width="48" height="4" rx="2" fill="#2196F3"/>
+          <rect x="40" y="65" width="35" height="4" rx="2" fill="#2196F3"/>
+          <rect x="40" y="75" width="25" height="4" rx="2" fill="#2196F3"/>
+        </svg>
+        `;
+        
+        // Display the SVG
+        document.getElementById('svgContainer').innerHTML = svgData;
+        
+        // Render the SVG to canvas in different sizes
+        function renderSVG(size) {
+            const canvas = document.getElementById(`canvas${size}`);
+            const ctx = canvas.getContext('2d');
+            
+            // Create an image element with the SVG
+            const img = new Image();
+            img.src = 'data:image/svg+xml;base64,' + btoa(svgData);
+            
+            img.onload = function() {
+                ctx.clearRect(0, 0, size, size);
+                ctx.drawImage(img, 0, 0, size, size);
+            };
+        }
+        
+        // Download the icon as PNG
+        function downloadIcon(size) {
+            const canvas = document.getElementById(`canvas${size}`);
+            const dataURL = canvas.toDataURL('image/png');
+            
+            const link = document.createElement('a');
+            link.download = `icon${size}.png`;
+            link.href = dataURL;
+            link.click();
+        }
+        
+        // Render all sizes when the page loads
+        window.onload = function() {
+            renderSVG(16);
+            renderSVG(48);
+            renderSVG(128);
+        };
+    </script>
+</body>
+</html>

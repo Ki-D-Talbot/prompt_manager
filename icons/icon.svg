@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#2196F3"/>
+  
+  <!-- Speech bubble -->
+  <path d="M40 45 H88 Q98 45 98 55 V75 Q98 85 88 85 H70 L64 95 L58 85 H40 Q30 85 30 75 V55 Q30 45 40 45 Z" fill="white"/>
+  
+  <!-- Text lines -->
+  <rect x="40" y="55" width="48" height="4" rx="2" fill="#2196F3"/>
+  <rect x="40" y="65" width="35" height="4" rx="2" fill="#2196F3"/>
+  <rect x="40" y="75" width="25" height="4" rx="2" fill="#2196F3"/>
+</svg>
