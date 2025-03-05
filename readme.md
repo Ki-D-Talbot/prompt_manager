@@ -2,7 +2,7 @@
 
 A powerful Chrome extension for managing, organizing, and retrieving AI prompts with advanced search and NLP capabilities.
 
-![Prompt Manager Screenshot](https://via.placeholder.com/800x450)
+![Prompt Manager Screenshot](./screenshots/prompt-manager-main.png)
 
 ## Features
 
