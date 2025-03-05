@@ -1,26 +1,27 @@
 {
-  "manifest_version": 3,
-  "name": "Prompt Manager",
-  "version": "1.0",
-  "description": "Easily manage, organize, and share your prompt library",
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
+    "manifest_version": 3,
+    "name": "Prompt Manager",
+    "version": "1.1.0",
+    "description": "Easily manage, organize, and share your prompt library with advanced search and NLP",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    },
+    "permissions": [
+      "storage",
+      "downloads"
+    ],
+    "icons": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
+    },
+    "background": {
+      "service_worker": "background.js",
+      "type": "module"
     }
-  },
-  "permissions": [
-    "storage",
-    "downloads"
-  ],
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
-  "background": {
-    "service_worker": "background.js"
   }
-}
