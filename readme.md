@@ -31,7 +31,7 @@ A powerful Chrome extension for managing, organizing, and retrieving AI prompts 
 ### From Source (Developer Mode)
 1. Clone this repository or download the source code
    ```
-   git clone https://github.com/ki-d-talbot/prompt-manager.git
+   git clone https://github.com/ki-d-talbot/prompt_manager.git
    ```
 
 2. Open Chrome and navigate to `chrome://extensions/`
